@@ -1,12 +1,17 @@
+var oPageLoading = document.getElementsByClassName('pageLoading')[0];
+var oLoadingBar = document.getElementsByClassName('loadingBar')[0];
+var oHelloText = document.getElementsByClassName('helloText')[0];
+
 var percentage = 0;
 var timer;
 timer = setInterval(function(){
-    $('.loadingBar').css('width', percentage + '%');
+    oLoadingBar.style.width = percentage + '%'
     percentage += 1;
     if(percentage > 100) {
-        $('.pageLoading').addClass('disappear');
+        oPageLoading.classList.add('disappear');
         setTimeout(function() {
-            $('.helloText').html('<h2>We Are Monsters </h2>');
+            var newH2 = '<h2>We Are Monsters </h2>';
+            oHelloText.innerHTML = newH2;
         }, 2200);
         clearInterval(timer);
     }
