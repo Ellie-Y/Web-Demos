@@ -35,7 +35,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* alternate 是 0 - 50% 也有动画，显得不突兀 */
+    /* alternate is to have transition between 0 - 50% */
     animation: jump 0.8s infinite alternate;
 }
 
@@ -118,8 +118,7 @@ h2 {
     background-color: #fff;
     border-radius: 5px;
     margin-top: 40px;
-    /* 超出部分隐藏里面的进度条就是和父级样式一样了 */
-    /* 不用再重新设置 border-radius */
+    /* keep the style of inside loading bar as the same as its parent style */
     overflow: hidden;
 }
 
