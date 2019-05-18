@@ -137,9 +137,10 @@ body,
 }
 
 .wrapper-active .content .item {
-    /* 先变化高度再变化宽度
-    然后父级 content 垂直居中，
-    不然其他图片就是从上收起的 */
+    /*
+    Parent content needs to have align-items: center property
+    in order to make sure other unactive photos changed from center 
+    */
     transition: height 0.5s linear,
                 width 0.5s linear 0.5s;
 }
