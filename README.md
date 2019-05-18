@@ -1,8 +1,6 @@
 # Web-demos
 
-> Display links are not stable sometimes, try more times if you wish 
-
-> The native js is used to all demos
+> Display links are not stable sometimes, try more times if you wish <br/> The native js is used to all demos
 
 - <a href="http://htmlpreview.github.io/?https://github.com/Ellie-Y/web-demo/blob/master/Loading/index.html">Loading Effect - animation transition (CSS3) </a>
 
