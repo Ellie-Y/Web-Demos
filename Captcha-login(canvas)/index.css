@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: rgb(70, 70, 70);
+    font-size: 13px;
+    outline: none;
+}
+
+.wrapper {
+    position: absolute;
+    width: 345px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.inputArea {
+    position: relative;
+
+}
+
+input {
+    display: inline-block;
+    width: 280px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.inputArea  span {
+    position: absolute;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(./img/true.png);
+    background-size: 100%;
+    margin: 2px 0 0 8px;
+    display: none;
+}
+
+.error {
+    color: rgb(185, 75, 75);
+    margin-top: 10px;
+    font-size: 12px;
+    margin-left: 5px;
+    display: none;
+}
+
+.canvasArea {
+    position: relative;
+    width: 300px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+}
+
+.canvasArea .imgArea {
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/bg.jpg);
+}
+
+#canvas {
+    border: 1px solid rgb(255, 244, 148);
+}
+
+.canvasArea .refresh {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    top: 0;
+    right: -40px;
+    background-image: url(./img/update.png);
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+}
+
+.submit {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #e7decc;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
