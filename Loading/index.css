@@ -62,8 +62,8 @@ h2 {
 .monster .mouth {
     width: 32%;
     height: 12px;
-    border-radius: 12px;
     background-color: #fff;
+    border-radius: 12px;
 }
 
 .monster::before,
