@@ -5,7 +5,7 @@ for(var i = 65; i <= 122; i++) {
     if(i > 90 && i < 97) {
         continue;
     }else {
-        //把 unicode 编码转对应的字母
+        //Convert Unicode encoding to the corresponding letter
         randomCode.push( String.fromCharCode(i) );
     }
 }
@@ -15,8 +15,7 @@ function createCode() {
     var codeStr = '';
     codeValue = '';
     for(var i = 0; i < 6; i++) {
-        //随机算法是在长度64的 randomCode数组里面随机取出一个索引值然后赋值给randomStr，往复循环6次
-        //Math.floor 向下取整
+        //Math.floor is for rounding down
         var randomStr = randomCode[ Math.floor(Math.random() * randomCode.length) ];
         codeStr += randomStr + ' ';
         codeValue += randomStr;
@@ -28,7 +27,7 @@ function createCode() {
     oImg.onload = function() {
         var background = paint.createPattern(oImg, 'repeat');
         paint.fillStyle = background;
-        //清空
+        //empty the paint
         paint.fillRect(0, 0, myCanvas.width, myCanvas.height);
         paint.textAlign = 'center';
         paint.fillStyle = '#ccc';
