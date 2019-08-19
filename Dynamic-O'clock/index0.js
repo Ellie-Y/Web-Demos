@@ -1,12 +1,25 @@
 var column = document.getElementsByClassName('column');
 //面向对象编程
 function Index(dom, use24Hours) {
-    //get dom and convert to Array
-    this.column = Array.from(dom);
+    this.column = Array.from(dom); //把 dom对象拿过来变成数组
     this.classList = ['visible', 'close', 'far', 'far', 'distance', 'distance'];
     this.use24Hours = use24Hours;
+    // this.createDom();
     this.start();
 }
+
+//动态生成时分秒的结构
+// Index.prototype.createDom = function() {
+//     for(var i = 0; i < 6; i++) {
+//        var oDiv = '<div>'+i+'</div>';
+//        $('.six').append(oDiv)
+//
+//    }
+//    for(var i = 0; i < 10; i++) {
+//        var iDiv = '<div>'+i+'</div>';
+//        $('.ten').append(iDiv);
+//    }
+// }
 
 Index.prototype.start = function() {
     var self = this;
@@ -15,9 +28,13 @@ Index.prototype.start = function() {
         self.column.forEach(function(ele, index) {
             var timeIndex = + time[index];
             var offset = timeIndex * 86;
+            // $(ele).css({
+            //     'transform': 'translateY( calc(50vh - '+ offset + 'px - 60px) )'
+            // });
             ele.style.transform = 'translateY( calc(50vh - '+ offset + 'px - 60px) )';
             Array.from(ele.children).forEach(function(ele2, index2) {
-                var className = self.getClass(timeIndex, index2);
+                var className = self.getClass(timeIndex, index2);  //实参
+                // $(ele2).attr('class', className);
                 ele2.setAttribute('class', className);
             });
         });
@@ -31,10 +48,10 @@ Index.prototype.getClass = function(time, i) {
     return className || '';
 }
 
-//get the current time, and deal with the formate
+//获得当前时间，并处理时间格式
 Index.prototype.getOclock = function() {
     var date = new Date();
-    //hours, min and seconds spell to string, obtain 12 when its 0
+    //时分秒拼成字符串，为 0的时候取 12
     return [this.use24Hours ? date.getHours() : date.getHours % 12 || 12, date.getMinutes(), date.getSeconds()].reduce(function(p, n) {
         return p + ('0' + n).slice(-2);
     }, '')
