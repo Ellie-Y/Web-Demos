@@ -13,4 +13,4 @@
 
 - <a href="http://htmlpreview.github.io/?https://github.com/Ellie-Y/Web-Demos/blob/master/Particles-Animation/index.html">Particles Animation (Canvas)</a>
 
-- <a href="https://github.com/Ellie-Y/Web-Demos/blob/master/Dynamic-O'clock/index.html">Dynamic O'clock</a>
+- <a href="http://htmlpreview.github.io/?https://github.com/Ellie-Y/Web-Demos/blob/master/Dynamic-O'clock/index.html">Dynamic O'clock</a>
